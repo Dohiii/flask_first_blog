@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+
+<main id="main">
+
+
+
+    <section id="contact" class="contact mb-5">
+        {% for message in get_flashed_messages() %}
+
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+
+        {% endfor %}
+
+        {% if name %}
+
+        <h1>Hello {{name}}</h1>
+
+        {% else %}
+        <div class="form mt-5">
+            <form action="" method="POST" class="php-email-form">
+                {{form.hidden_tag()}}
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        {{form.name.label(
+                            class='form-label'
+                        )}}
+                        {{form.name(
+                            class="form-control"
+                        )}}
+                    </div>
+
+
+                    <div class="text-center ">{{form.submit(
+                        class="button"
+                        )}}</div>
+            </form>
+        </div><!-- End Contact Form -->
+
+        </div>
+
+
+        {% endif %}
+    </section>
+
+
+</main><!-- End #main -->
+
+{% endblock content %}

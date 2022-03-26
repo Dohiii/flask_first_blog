@@ -726,7 +726,7 @@ section {
 .aside-block .custom-tab-nav .nav-item {
   display: inline-block;
 }
-.aside-block .custom-tab-nav .nav-item button {
+.aside-block .custom-tab-nav .nav-item .button {
   color: var(--color-black);
   text-transform: uppercase;
   font-size: 12px;
@@ -737,7 +737,7 @@ section {
   padding-right: 0;
   margin-right: 20px;
 }
-.aside-block .custom-tab-nav .nav-item button.active {
+.aside-block .custom-tab-nav .nav-item .button.active {
   background-color: var(--color-black) !important;
   background-color: transparent !important;
   color: var(--color-black);
@@ -998,7 +998,7 @@ section {
 .contact .php-email-form input::focus, .contact .php-email-form textarea::focus {
   background-color: var(--color-primary);
 }
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form .button {
   background: var(--color-primary);
   border: 0;
   padding: 10px 30px;
@@ -1006,7 +1006,7 @@ section {
   transition: 0.4s;
   cursor: pointer;
 }
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form .button:hover {
   background: rgba(var(--color-primary-rgb), 0.8);
 }
 @-webkit-keyframes animate-loading {

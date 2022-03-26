@@ -54,7 +54,7 @@
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="{{ url_for('index') }}" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
                 <h1>ValBlog</h1>
@@ -62,12 +62,11 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="index.html">Blog</a></li>
-                    <li><a href="single-post.html">Single Post</a></li>
-
-
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{{ url_for('index') }}">Blog</a></li>
+                    <li><a href="{{ url_for("user", name='Val') }}">User</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <li><a href="{{ url_for('name') }}">Name</a></li>
                 </ul>
             </nav><!-- .navbar -->
 
